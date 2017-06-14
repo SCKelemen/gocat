@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"	
 	"github.com/fatih/color"
-	"go/token"
-	"github.com/golang-collections/collections/stack" 
+//	"go/token"
+//	"github.com/golang-collections/collections/stack" 
 )
 
 func main() {
@@ -45,6 +45,13 @@ for i := 0; i < 15; i++ {
 	print(" ")
     }
 print("\r\n")
+for i := 0; i < 20; i++ {
+		println()
+	}
+
+print(BgBlueString("{"), " ", BgCyanString("{"), " ", BgGreenString("{"), " ", BgGreenString("}"), " ", BgGreenString("{"), " ", BgYellowString("{"), " ", BgYellowString("}"), " ",  BgGreenString("}"), " ", BgCyanString("}"), " ", BgCyanString("{"), " ", BgCyanString("}"), " ", BgBlueString("}"))
+println()
+
 
 }
 
@@ -167,16 +174,16 @@ func nthBracketColor(c int) string {
 }
 
 
-func colorBrackets(code string) {
-	s := stack.New()
-	for i := 0; i < len(code); i++ {
-        	switch code[i] {
-		 case '{': 
-			stack.Push(i)
-			break
-		 case '}':
-		}
-    	} 
-}
+//func colorBrackets(code string) {
+//	s := stack.New()
+//	for i := 0; i < len(code); i++ {
+  //      	switch code[i] {
+//		 case '{': 
+//			stack.Push(i)
+//			break
+//		 case '}':
+//		}
+  //  	} 
+//}
 
 
