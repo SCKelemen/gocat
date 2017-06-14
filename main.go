@@ -35,6 +35,8 @@ printf("Status: %n\n", StatusColor(500))
 printf("Status: %n\n", StatusColor(501))
 printf("Status: %n\n", StatusColor(599))
 printf("Status: %n\n", StatusColor(600))
+
+print(BgBlueString("Tas"), BgCyanString("te t"), BgGreenString("he r"), BgYellowString("ain"), BgRedString("bow"), BgMagentaString("!!!"), "\r\n")
 }
 
 func colorString(format string, p color.Attribute, a ...interface{}) string {
