@@ -37,6 +37,13 @@ printf("Status: %n\n", StatusColor(599))
 printf("Status: %n\n", StatusColor(600))
 
 print(BgBlueString("Tas"), BgCyanString("te t"), BgGreenString("he r"), BgYellowString("ain"), BgRedString("bow"), BgMagentaString("!!!"), "\r\n")
+
+for i := 0; i < 15; i++ {
+	print(nthBracketColor(i))
+	print(" ")
+    }
+print("\r\n")
+
 }
 
 func colorString(format string, p color.Attribute, a ...interface{}) string {
@@ -134,3 +141,28 @@ func methodColor(method string) string {
 //	}
 return "lllll"
 }
+
+
+
+//nthBracketColor returns the colored string
+//for the pair of matching braces such that
+//every level deep is highlighted with 
+//a different color, otherwise returns 
+//"FUUUUUCK". Example: 
+// blue{  cyan{  green{  }green  }cyan  }blue
+func nthBracketColor(c int) string {
+	switch c % 6 {
+		case 0: return BgBlueString("{")
+		case 1: return BgCyanString("{")
+		case 2: return BgGreenString("{")
+		case 3: return BgYellowString("{")
+		case 4: return BgRedString("{")
+		case 5: return BgMagentaString("{")
+		default:
+			return "FUUUUUUUCK"
+	}
+	
+}
+
+
+
