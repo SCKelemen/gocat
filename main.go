@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"	
-	"github.com/fatih/color" 
+	"github.com/fatih/color"
+	"go/token"
+	"github.com/golang-collections/collections/stack" 
 )
 
 func main() {
@@ -164,5 +166,17 @@ func nthBracketColor(c int) string {
 	
 }
 
+
+func colorBrackets(code string) {
+	s := stack.New()
+	for i := 0; i < len(code); i++ {
+        	switch code[i] {
+		 case '{': 
+			stack.Push(i)
+			break
+		 case '}':
+		}
+    	} 
+}
 
 
